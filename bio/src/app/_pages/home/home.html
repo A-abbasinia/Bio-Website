@@ -1,86 +1,682 @@
-<div class="min-h-screen animated-bg flex items-center justify-center px-6 relative font-sans">
-  <!-- Social Icons -->
-  <div class="absolute top-6 right-6 flex items-center gap-2 group">
+<div class="min-h-screen animated-bg flex items-center justify-center px-6 relative font-sans overflow-hidden">
+
+  <!-- 3D Floating Particles Background -->
+  <div class="particles-container">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+    <div class="particle particle-7"></div>
+    <div class="particle particle-8"></div>
+  </div>
+
+  <!-- Animated Grid Background -->
+  <div class="grid-background"></div>
+
+  <!-- Social Icons with 3D Effect -->
+  <div class="absolute top-6 right-6 z-50 animate-slide-in-right">
     <a
       href="https://github.com/A-abbasinia"
       target="_blank"
       rel="noopener noreferrer"
-      class="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition duration-200"
+      class="group relative flex items-center gap-3 px-5 py-3
+             bg-white/5 backdrop-blur-xl border border-blue-500/20
+             rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+             hover:bg-blue-500/10 hover:border-blue-400/40
+             transition-all duration-500 overflow-hidden
+             hover:scale-110 hover:shadow-[0_8px_32px_rgba(59,130,246,0.4)]
+             transform-style-preserve-3d hover:rotate-y-12"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+      <!-- Glow effect -->
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-blue-500/0
+                  translate-x-[-200%] group-hover:translate-x-[200%]
+                  transition-transform duration-1000"></div>
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="h-6 w-6 relative z-10 text-blue-400 group-hover:text-white
+                  transition-all duration-500 group-hover:rotate-[360deg] group-hover:scale-110"
+           fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.624-5.475 5.92.43.37.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
       </svg>
-      <span class="text-sm font-mono font-semibold">My GitHub</span>
+      <span class="relative z-10 text-sm font-mono font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">
+        My GitHub
+      </span>
     </a>
   </div>
 
-  <!-- Main Content -->
-  <div class="max-w-xl w-full text-center space-y-8 animate-fade-in">
-    <h1 class="text-5xl font-extrabold text-white leading-tight tracking-tight">
-      A brief biography of
-      <span class="block text-blue-400 mt-2">ME ⟶ Amir Abbasinia</span>
-    </h1>
+  <!-- Main 3D Content Card -->
+  <div class="max-w-2xl w-full relative z-10 animate-float-up" style="animation-delay: 0.3s;">
 
-    <!-- دکمه -->
-    <button
-      (click)="goToBio()"
-      [ngClass]="{
-        'scale-110 opacity-0 transition duration-500 ease-out': animate
-      }"
-      class="relative inline-flex items-center justify-center gap-2 px-6 py-3
-             bg-black/20 backdrop-blur-lg text-blue-400 text-base font-medium
-             rounded-xl shadow-lg shadow-blue-500/20
-             transition-all duration-300 animate-bounce-slow group overflow-hidden
-             hover:bg-blue-500"
-    >
-      <span class="relative z-10 flex items-center gap-2 group-hover:text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 transition duration-300 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-        View Full Bio
-      </span>
-      <!-- نورپردازی -->
-      <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-transparent to-blue-500 opacity-0 group-hover:opacity-30 transition duration-500"></span>
-      <span class="absolute inset-0 rounded-xl bg-gradient-to-t from-blue-500 via-transparent to-blue-500 opacity-0 group-hover:opacity-30 transition duration-500"></span>
-    </button>
+    <!-- 3D Card Container -->
+    <div class="card-3d group perspective-container">
+      <div class="card-inner relative p-12
+                  bg-gradient-to-br from-black/40 via-blue-950/20 to-black/40
+                  backdrop-blur-2xl border border-blue-500/30
+                  rounded-3xl shadow-[0_20px_80px_rgba(59,130,246,0.3)]
+                  transition-all duration-700
+                  hover:shadow-[0_30px_100px_rgba(59,130,246,0.5)]
+                  hover:border-blue-400/50
+                  transform-style-preserve-3d
+                  hover:rotate-y-5 hover:rotate-x-5">
 
-    <!-- لودینگ -->
-    <div *ngIf="loading" class="mt-6 flex justify-center items-center">
-      <div class="w-6 h-6 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+        <!-- Animated Corner Accents -->
+        <div class="corner-accent corner-top-left"></div>
+        <div class="corner-accent corner-top-right"></div>
+        <div class="corner-accent corner-bottom-left"></div>
+        <div class="corner-accent corner-bottom-right"></div>
+
+        <!-- Glowing Orbs -->
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 text-center space-y-8">
+
+          <!-- 3D Animated Title -->
+          <div class="title-3d-container">
+            <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-4
+                       text-transparent bg-clip-text
+                       bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400
+                       animate-gradient-x
+                       drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]
+                       hover:scale-105 transition-transform duration-500">
+              A brief biography of
+            </h1>
+
+            <div class="relative inline-block mt-4">
+              <!-- Animated underline -->
+              <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500
+                          animate-shimmer rounded-full blur-sm"></div>
+
+              <h2 class="text-6xl sm:text-7xl font-black
+                         text-transparent bg-clip-text
+                         bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400
+                         animate-gradient-x
+                         filter drop-shadow-[0_0_40px_rgba(34,211,238,0.8)]
+                         hover:scale-110 transition-all duration-500
+                         relative z-10">
+                ME
+                <span class="inline-block ml-3 animate-bounce-x text-blue-400">⟶</span>
+              </h2>
+            </div>
+
+            <h3 class="text-3xl sm:text-4xl font-bold mt-6
+                       text-white/90
+                       animate-fade-in-delay
+                       hover:text-blue-300 transition-colors duration-300">
+              Amir Abbasinia
+            </h3>
+          </div>
+
+          <!-- Decorative Line -->
+          <div class="flex items-center justify-center gap-4 my-8">
+            <div class="h-[2px] w-20 bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse-slow"></div>
+            <div class="w-2 h-2 rounded-full bg-blue-400 animate-ping-slow"></div>
+            <div class="h-[2px] w-20 bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse-slow"></div>
+          </div>
+
+          <!-- 3D Button -->
+          <div class="relative inline-block">
+            <button
+              (click)="goToBio()"
+              [ngClass]="{
+                'scale-110 opacity-0 pointer-events-none': animate
+              }"
+              class="button-3d group relative inline-flex items-center justify-center gap-3
+                     px-8 py-4
+                     bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500
+                     text-white text-lg font-bold
+                     rounded-2xl
+                     shadow-[0_10px_40px_rgba(59,130,246,0.4)]
+                     transition-all duration-500
+                     hover:shadow-[0_15px_60px_rgba(59,130,246,0.7)]
+                     hover:scale-110
+                     transform-style-preserve-3d
+                     hover:translate-z-10
+                     active:scale-95
+                     overflow-hidden
+                     border-2 border-blue-400/50
+                     hover:border-cyan-300">
+
+              <!-- Animated gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent
+                          translate-x-[-200%] group-hover:translate-x-[200%]
+                          transition-transform duration-1000 ease-out"></div>
+
+              <!-- Button content -->
+              <span class="relative z-10 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6 transition-all duration-500
+                            group-hover:translate-x-2 group-hover:scale-125
+                            group-hover:rotate-90
+                            filter drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+                <span class="tracking-wider">View Full Bio</span>
+              </span>
+
+              <!-- Pulsing glow -->
+              <div class="absolute inset-0 rounded-2xl bg-blue-400 opacity-0 group-hover:opacity-20
+                          blur-xl transition-opacity duration-500"></div>
+            </button>
+
+            <!-- Button shadow decoration -->
+            <div class="absolute inset-0 -z-10 bg-gradient-to-r from-blue-600 to-cyan-500
+                        rounded-2xl blur-2xl opacity-50 group-hover:opacity-70
+                        transition-opacity duration-500 scale-110"></div>
+          </div>
+
+          <!-- Loading Spinner -->
+          <div *ngIf="loading" class="mt-8 flex justify-center items-center">
+            <div class="relative w-16 h-16">
+              <!-- Outer ring -->
+              <div class="absolute inset-0 border-4 border-blue-400/20 rounded-full"></div>
+              <!-- Spinning gradient ring -->
+              <div class="absolute inset-0 border-4 border-transparent
+                          border-t-blue-400 border-r-cyan-400
+                          rounded-full animate-spin-smooth"></div>
+              <!-- Inner pulse -->
+              <div class="absolute inset-2 bg-blue-500/30 rounded-full animate-pulse-slow"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- Floating Decorative Elements -->
+  <div class="floating-element floating-circle-1"></div>
+  <div class="floating-element floating-circle-2"></div>
+  <div class="floating-element floating-square-1"></div>
+  <div class="floating-element floating-triangle-1"></div>
+
 </div>
 
 <style>
-  @keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fade-in {
-    animation: fade-in 1.8s ease-out forwards;
+  /* Core 3D Setup */
+  .perspective-container {
+    perspective: 1500px;
   }
 
-  @keyframes bounce-slow {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-4px);
-    }
-  }
-  .animate-bounce-slow {
-    animation: bounce-slow 3s ease-in-out infinite;
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
   }
 
-  /* بک‌گراند انیمیشنی تیره */
+  /* 3D Card Rotation on Hover */
+  .card-3d {
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .card-inner {
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* Animated Background */
   @keyframes gradient-move {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+
   .animated-bg {
-    background: linear-gradient(-45deg, #000000, #111827, #1f2937, #0f172a);
+    background: linear-gradient(-45deg, #000000, #0a0e1a, #111827, #1a1f3a, #0f172a, #020617);
     background-size: 400% 400%;
-    animation: gradient-move 30s ease infinite;
+    animation: gradient-move 20s ease infinite;
+    position: relative;
+  }
+
+  /* Animated Grid Background */
+  .grid-background {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-flow 20s linear infinite;
+    z-index: 1;
+  }
+
+  @keyframes grid-flow {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+
+  /* 3D Floating Particles */
+  .particles-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: float-3d 20s ease-in-out infinite;
+  }
+
+  .particle-1 {
+    width: 6px;
+    height: 6px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+  }
+
+  .particle-2 {
+    width: 8px;
+    height: 8px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+    animation-duration: 18s;
+  }
+
+  .particle-3 {
+    width: 5px;
+    height: 5px;
+    bottom: 30%;
+    left: 70%;
+    animation-delay: 4s;
+    animation-duration: 22s;
+  }
+
+  .particle-4 {
+    width: 7px;
+    height: 7px;
+    top: 40%;
+    right: 40%;
+    animation-delay: 1s;
+    animation-duration: 20s;
+  }
+
+  .particle-5 {
+    width: 4px;
+    height: 4px;
+    top: 80%;
+    left: 30%;
+    animation-delay: 3s;
+    animation-duration: 17s;
+  }
+
+  .particle-6 {
+    width: 6px;
+    height: 6px;
+    top: 10%;
+    right: 25%;
+    animation-delay: 5s;
+    animation-duration: 19s;
+  }
+
+  .particle-7 {
+    width: 5px;
+    height: 5px;
+    bottom: 20%;
+    right: 60%;
+    animation-delay: 2.5s;
+    animation-duration: 21s;
+  }
+
+  .particle-8 {
+    width: 7px;
+    height: 7px;
+    top: 50%;
+    left: 5%;
+    animation-delay: 4.5s;
+    animation-duration: 16s;
+  }
+
+  @keyframes float-3d {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) scale(1);
+      opacity: 0.6;
+    }
+    25% {
+      transform: translate3d(100px, -100px, 50px) scale(1.2);
+      opacity: 1;
+    }
+    50% {
+      transform: translate3d(-50px, 100px, -50px) scale(0.8);
+      opacity: 0.7;
+    }
+    75% {
+      transform: translate3d(150px, 50px, 30px) scale(1.1);
+      opacity: 0.9;
+    }
+  }
+
+  /* Corner Accents */
+  .corner-accent {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(59, 130, 246, 0.5);
+    transition: all 0.5s ease;
+  }
+
+  .corner-top-left {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 12px 0 0 0;
+  }
+
+  .corner-top-right {
+    top: -2px;
+    right: -2px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 12px 0 0;
+  }
+
+  .corner-bottom-left {
+    bottom: -2px;
+    left: -2px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 12px;
+  }
+
+  .corner-bottom-right {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 12px 0;
+  }
+
+  .card-inner:hover .corner-accent {
+    width: 60px;
+    height: 60px;
+    border-color: rgba(59, 130, 246, 1);
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.8));
+  }
+
+  /* Glowing Orbs */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  .glow-orb-1 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.6), transparent);
+    top: -50px;
+    left: -50px;
+  }
+
+  .glow-orb-2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.4), transparent);
+    bottom: -80px;
+    right: -80px;
+    animation-delay: 2s;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+  }
+
+  /* Gradient Text Animation */
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient-x {
+    background-size: 200% auto;
+    animation: gradient-x 4s ease infinite;
+  }
+
+  /* Shimmer Effect */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  /* Bounce X Animation */
+  @keyframes bounce-x {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+
+  .animate-bounce-x {
+    animation: bounce-x 2s ease-in-out infinite;
+  }
+
+  /* Float Up Animation */
+  @keyframes float-up {
+    from {
+      opacity: 0;
+      transform: translateY(60px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-float-up {
+    animation: float-up 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    opacity: 0;
+  }
+
+  /* Slide In Right */
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+
+  /* Fade In Delay */
+  @keyframes fade-in-delay {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-delay {
+    animation: fade-in-delay 1s ease-out 0.8s forwards;
+    opacity: 0;
+  }
+
+  /* Smooth Spin */
+  @keyframes spin-smooth {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-smooth {
+    animation: spin-smooth 2s linear infinite;
+  }
+
+  /* Pulse Slow */
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  /* Ping Slow */
+  @keyframes ping-slow {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .animate-ping-slow {
+    animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  /* 3D Button */
+  .button-3d {
+    transform: translateZ(0);
+  }
+
+  .button-3d:hover {
+    transform: translateZ(20px) scale(1.1);
+  }
+
+  .button-3d:active {
+    transform: translateZ(10px) scale(0.95);
+  }
+
+  /* Floating Decorative Elements */
+  .floating-element {
+    position: absolute;
+    opacity: 0.15;
+    filter: blur(1px);
+  }
+
+  .floating-circle-1 {
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(59, 130, 246, 0.4);
+    border-radius: 50%;
+    top: 15%;
+    left: 8%;
+    animation: float-rotate 25s linear infinite;
+  }
+
+  .floating-circle-2 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(34, 211, 238, 0.3);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 10%;
+    animation: float-rotate 30s linear infinite reverse;
+  }
+
+  .floating-square-1 {
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(147, 51, 234, 0.3);
+    top: 70%;
+    left: 15%;
+    animation: float-rotate 20s linear infinite;
+    transform: rotate(45deg);
+  }
+
+  .floating-triangle-1 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 87px solid rgba(59, 130, 246, 0.2);
+    top: 10%;
+    right: 20%;
+    animation: float-rotate 35s linear infinite;
+  }
+
+  @keyframes float-rotate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+    }
+  }
+
+  /* 3D Rotation Effects */
+  .hover\:rotate-y-5:hover {
+    transform: rotateY(5deg);
+  }
+
+  .hover\:rotate-x-5:hover {
+    transform: rotateX(5deg);
+  }
+
+  .hover\:rotate-y-12:hover {
+    transform: rotateY(12deg);
+  }
+
+  .hover\:translate-z-10:hover {
+    transform: translateZ(10px);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .particle {
+      width: 4px !important;
+      height: 4px !important;
+    }
+
+    .floating-element {
+      opacity: 0.08;
+    }
   }
 </style>
